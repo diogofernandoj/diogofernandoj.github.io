@@ -79,25 +79,21 @@ function copiar() {
 }
 
 // Mostrar ou esconder projetos
-const projectButton = document.querySelector('#project-btn')
+const seeProjectsButton = document.querySelector('#see-projects-btn')
+const seeTrendsButton = document.querySelector('#see-trends-btn')
 const titleProjects = document.querySelector('.project-title')
 const allProjects = document.querySelector('.projects-container')
 const trendProjects = document.querySelector('.trend-container')
-projectButton.addEventListener('click', () => {
-    if (trendProjects.classList.contains('active')) {
-        titleProjects.textContent = 'Projetos'
-        trendProjects.classList.remove('active')
-        allProjects.classList.add('active')
-        projectButton.style.top = 'auto'
-        projectButton.style.bottom = '10px'
-        projectButton.textContent = 'Ver menos'
-    } else if (allProjects.classList.contains('active')) {
-        titleProjects.textContent = 'Destaques'
-        allProjects.classList.remove('active')
-        trendProjects.classList.add('active')
-        projectButton.style.top = '600px'
-        projectButton.textContent = 'Ver mais'
-    }
+seeProjectsButton.addEventListener('click', () => {
+    titleProjects.textContent = 'Projetos'
+    trendProjects.classList.remove('active')
+    allProjects.classList.add('active')
+})
+
+seeTrendsButton.addEventListener('click', () => {
+    titleProjects.textContent = 'Destaques'
+    allProjects.classList.remove('active')
+    trendProjects.classList.add('active')
 })
 
 // Carrossel

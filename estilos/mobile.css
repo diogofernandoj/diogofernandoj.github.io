@@ -43,8 +43,8 @@
     right: 0;
     left: 0;
     height: 0px;
-    border-bottom: 2px solid #181818;
-    border-top: 2px solid #181818;
+    border-bottom: 3px solid #222;
+    border-top: 3px solid #222;
     background-color: #080808;
     flex-direction: column;
     visibility: hidden;
@@ -57,8 +57,8 @@
 }
 
 .navbar-container .menu .menu-item:nth-child(2) {
-    border-top: 2px solid #111;
-    border-bottom: 2px solid #111;
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
 }
 
 .navbar-container .menu .menu-item {
