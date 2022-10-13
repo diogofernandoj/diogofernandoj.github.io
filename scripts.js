@@ -12,27 +12,22 @@ document.body.onscroll = () => {
 
 // Scroll smooth
 document.querySelector('.ilogo').addEventListener("click", function(event) {
-    event.preventDefault();
     scrollTo('#showcase');
 });
 
 document.querySelector('.ihome').addEventListener("click", function(event) {
-    event.preventDefault();
     scrollTo('#showcase');
 });
 
 document.querySelector('.iabout').addEventListener("click", function(event) {
-    event.preventDefault();
     scrollTo('#about');
 });
 
 document.querySelector('.btn-explore').addEventListener("click", function(event) {
-    event.preventDefault();
     scrollTo('#about');
 });
 
 document.querySelector('.iprojects').addEventListener("click", function(event) {
-    event.preventDefault();
     scrollTo('#projects');
 });
 
