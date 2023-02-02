@@ -4,200 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="estilos/mobile.css">
+    <link rel="stylesheet" href="style.css">
     <title>Portfólio | Diogo Jorge</title>
 </head>
 <body>
-    <nav id="navbar">
-        <div class="navbar-container">
-            <div class="logo ilogo">Logo</div>
-            <button id="menu-mobile" class="menu-mobile"><span class="btn-menu"></span></button>
-            <ul class="menu">
-                <li class="menu-item ihome">Início</li>
-                <li class="menu-item iabout">Sobre</li>
-                <li class="menu-item iprojects">Projetos</li>
+    <nav id="navbar-container">
+        <div class="navbar">
+            <div class="logo">Diogo.J<span class="default-color">( )</span></div>
+
+            <button id="menu-btn" class="menu-btn"></button>
+
+            <ul class="menu-container">
+                <li class="home-btn">Início</li>
+                <li class="about-btn">Sobre</li>
+                <li class="projects-btn">Projetos</li>
+                <li class="contacts-btn">Contato</li>
             </ul>
+
         </div>
     </nav>
 
-    <section id="showcase">
-        <div class="showcase-container">
-            <p>Oi <i class="fa-solid fa-hand-peace"></i>, eu sou</p>
-            <h1>Diogo Jorge</h1>
-            <h2>Desenvoledor Front-End</h2>
-            <small>Explore meu site e me conheça melhor.</small>
-            <div class="links">
-                <div class="resume">
-                    <a href="Diogo Jorge CV.pdf" target="_blank" download="Diogo Jorge CV">Currículo <i class="fa-solid fa-cloud-arrow-down"></i></a>
-                </div>
-                <div class="social-media">
-                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/diogofernandoj" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
+    <section id="home-container">
+        <div class="home">
+            <div class="text-1">Oi, meu nome é</div>
+            <div class="text-2">Diogo Jorge</div>
+            <div class="text-3">
+                <div class="text">Eu sou</div>
+                <ul class="typing-container">
+                    <li class="typing-message">Desenvolvedor</li>
+                    <li class="typing-message">Programador</li>
+                </ul>
             </div>
+            <p>Explore meu site e me conheça melhor</p>
+            <a href="Diogo Jorge CV.pdf" target="_blank" download="Diogo Jorge CV" class="cv-btn">Donwload CV</a>
         </div>
+
         <div class="btn-explore"><i class="fa-solid fa-chevron-down"></i></div>
     </section>
 
-    <section id="about">
-        <div class="about-container">
-            <i class="fa-solid fa-user"></i>
-            <div class="about-content">
-                <h2>Sobre mim</h2>
-                <p><i class="fa-solid fa-location-dot"></i> Brotas, SP</p>
-                <p>Prazer, me chamo Diogo e estou estudando para me tornar um Dev Front-End. Curso Análise 
-                    e Desenvolvimento de Sistemas na Cruzeiro do Sul, onde conheci e me encantei pela área da programação, hoje também estudo por conta própria, para me desenvolver ainda mais, participando de diversos cursos, 
-                    ganhando certificações e sempre evoluindo.
-                </p>
-                <div class="email">
-                    <span class="my-email"><i class="fa-solid fa-envelope"></i> diogofernandoj@gmail.com</span>
-                    <button class="email-btn" onclick="copiar()">Copiar <i class="fa-solid fa-copy"></i></button>
+    <section id="about-container">
+        <h2>Sobre</h2>
+        <div class="about">
+            <div class="column-left">
+                <img src="" alt="">
+            </div>
+            
+            <div class="column-right">
+                <p>Prazer, me chamo Diogo e estou estudando para me tornar um Dev Front-End. Curso Análise
+                    e Desenvolvimento de Sistemas na Cruzeiro do Sul, onde conheci e me encantei pela área da programação, hoje também estudo por conta própria, para me desenvolver ainda mais, participando de diversos cursos,
+                    ganhando certificações e sempre evoluindo.</p>
+                    <span>Me acompanhe:</span>
+                <div class="links">
+                    <a href="https://github.com/diogofernandoj" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
+                    <a href="https://www.linkedin.com/in/diogofernandoj" target="_blank">Linked <i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects-container">
+        <h2>Projetos</h2>
 
-        <h2 class="project-title">Destaques</h2>
-        <div class="trend-container active">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
 
-            <div class="trend-cards">
-                
+        
+        <div class="projects">
+
+            <i class="fa-solid fa-chevron-right"></i>
+            <i class="fa-solid fa-chevron-left"></i>
+
+            <div class="cards">
                 <label for="slide1">
                     <div class="card c1">
+                        <img src="images/projeto-crud-photo.png" alt="Foto Miniatura do Projeto" class="card-image">
                         <div class="icons-card">
                             <i class="fa-brands fa-html5"></i>
                             <i class="fa-brands fa-css3-alt"></i>
                             <i class="fa-brands fa-square-js"></i>
                         </div>
-                        <img src="images/foto-projeto-tasks.png" alt="Foto Miniatura do Projeto" class="card-image">
-                        <h3 class="title-card">Lista de tarefas</h3>
-                        <p class="description-card">Adicione tarefas, clique para marcar a tarefa como concluída, ou clique no ícone ao lado para removê-la.</p>
-                        <a href="https://diogofernandoj.github.io/projeto-tasks/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
+                        <h3 class="title-card">CRUD</h3>
+                        <p class="description-card">Cadastre funcionários na tabela (Nome, Função e Salário), edite ou delete.</p>
+                        <a href="https://diogofernandoj.github.io/crud/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
                     </div>
                 </label>
-
                 <label for="slide2">
                     <div class="card c2">
+                        <img src="images/hash-game-photo.png" alt="Foto Miniatura do Projeto" class="card-image">
                         <div class="icons-card">
                             <i class="fa-brands fa-html5"></i>
                             <i class="fa-brands fa-css3-alt"></i>
                             <i class="fa-brands fa-square-js"></i>
                         </div>
-                        <img src="images/foto-projeto-form.png" alt="Foto Miniatura do Projeto" class="card-image">
-                        <h3 class="title-card">Formulário Login</h3>
-                        <p class="description-card">Meu primeiro projeto utilizando javascript, simulando a criação de uma conta, com validador de inputs.</p>
-                        <a href="https://diogofernandoj.github.io/projeto-form/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
+                        <h3 class="title-card">Jogo da velha</h3>
+                        <p class="description-card">Jogo 100% automático feito através do javascript.</p>
+                        <a href="https://diogofernandoj.github.io/hash-game/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
                     </div>
                 </label>
-
                 <label for="slide3">
                     <div class="card c3">
+                        <img src="images/projeto-login-photo.png" alt="Foto Miniatura do Projeto" class="card-image">
+                        <div class="icons-card">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-square-js"></i>
+                        </div>
+                        <h3 class="title-card">Tela de login</h3>
+                        <p class="description-card">Cadastre-se e use seus dados para fazer login (com validador de inputs).</p>
+                        <a href="https://diogofernandoj.github.io/login/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
+                    </div>
+                </label>
+                <label for="slide4">
+                    <div class="card c4 coming-soon">
+                        <img src="images/coming-soon-photo.png" alt="Foto Miniatura do Projeto" class="card-image coming-soon-image">
                         <div class="icons-card">
                             <i class="fa-brands fa-html5"></i>
                             <i class="fa-brands fa-css3-alt"></i>
                             <i class="fa-brands fa-square-js"></i>
                             <i class="fa-brands fa-react"></i>
                         </div>
-                        <img src="images/foto-embreve.png" alt="Foto Miniatura do Projeto" class="card-image">
-                        <h3 class="title-card">Lorem.</h3>
-                        <p class="description-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus ut itaque enim aliquam ad!</p>
-                        <a href=""><i class="fa-solid fa-paperclip"></i> Visualizar</a>
+                        <h3 class="title-card">Em breve</h3>
+                        <p class="description-card">Projetos com ReactJS em breve!</p>
                     </div>
                 </label>
             </div>
-
-            <button id="see-projects-btn">Ver mais <i class="fa-solid fa-down-long"></i></button>
-
-        </div>
-
-        <div class="projects-container">
-
-            <div class="card c1">
-                <div class="icons-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-square-js"></i>
-                </div>
-                <img src="images/foto-projeto-tasks.png" alt="Foto Miniatura do Projeto" class="card-image">
-                <h3 class="title-card">Lista de tarefas</h3>
-                <p class="description-card">Adicione tarefas, clique para marcar a tarefa como concluída, ou clique no ícone ao lado para removê-la.</p>
-                <a href="https://diogofernandoj.github.io/projeto-tasks/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-            </div>
-        
-            <div class="card c2">
-                <div class="icons-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-square-js"></i>
-                </div>
-                <img src="images/foto-projeto-form.png" alt="Foto Miniatura do Projeto" class="card-image">
-                <h3 class="title-card">Formulário Login</h3>
-                <p class="description-card">Meu primeiro projeto utilizando javascript, simulando a criação de uma conta, com validador de inputs.</p>
-                <a href="https://diogofernandoj.github.io/projeto-form/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-            </div>
-        
-            <div class="card c3">
-                <div class="icons-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-square-js"></i>
-                    <i class="fa-brands fa-react"></i>
-                </div>
-                <img src="images/foto-embreve.png" alt="Foto Miniatura do Projeto" class="card-image">
-                <h3 class="title-card">Lorem.</h3>
-                <p class="description-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus ut itaque enim aliquam ad!</p>
-                <a href=""><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-            </div>
-
-            <div class="card c4">
-                <div class="icons-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                </div>
-                <img src="images/foto-embreve.png" alt="Foto Miniatura do Projeto" class="card-image">
-                <h3 class="title-card">Lorem ipsum dolor sit.</h3>
-                <p class="description-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus ut itaque enim aliquam ad!</p>
-                <a href=""><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-            </div>
-
-            <div class="card c5">
-                <div class="icons-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <i class="fa-brands fa-square-js"></i>
-                </div>
-                <img src="images/foto-embreve.png" alt="Foto Miniatura do Projeto" class="card-image">
-                <h3 class="title-card">Lorem, ipsum.</h3>
-                <p class="description-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus ut itaque enim aliquam ad!</p>
-                <a href=""><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-            </div>
-
-            <div class="card c6">
-                <div class="icons-card">
-                    <i class="fa-brands fa-html5"></i>
-                    <i class="fa-brands fa-css3-alt"></i>
-                </div>
-                <img src="images/foto-embreve.png" alt="Foto Miniatura do Projeto" class="card-image">
-                <h3 class="title-card">Lorem, ipsum dolor.</h3>
-                <p class="description-card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ducimus ut itaque enim aliquam ad!</p>
-                <a href=""><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-            </div>
-
-            <button id="see-trends-btn">Ver menos <i class="fa-solid fa-up-long"></i></button>
 
         </div>
 
     </section>
 
+    <section id="contacts-container">
+        <div class="contacts">
+            <i class="fa-solid fa-xmark"></i>
+            <h2>Fale comigo:</h2>
+            <span class="contact my-email" onclick="copiar()"><i class="fa-solid fa-envelope"></i> Email<i class="fa-regular fa-copy"></i></span>
+            <a href="https://linkwhats.app/445301" target="_blank" class="contact my-whatsapp"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+            <a href="https://www.instagram.com/diogofernandoj/" target="_blank" class="contact my-instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        </div>
+    </section>
+
+    <footer>Criado por <span>Diogo Jorge</span> | Todos os direitos reservados 2023.</footer>
+
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/d46c525ea6.js" crossorigin="anonymous"></script>
-
     <!-- Meu Script -->
     <script src="scripts.js"></script>
 </body>

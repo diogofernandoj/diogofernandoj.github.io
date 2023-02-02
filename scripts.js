@@ -1,34 +1,34 @@
 // Navbar fixa
-const nav = document.querySelector('#navbar')
+const nav = document.querySelector('#navbar-container')
 document.body.onscroll = () => {
     if(window.pageYOffset>70) {
-        nav.style.background = "#080808"
-        nav.style.borderBottom = "2px solid #222"
+        nav.style.background = '#0a0a0a'
+        nav.style.borderBottom = "1px solid #222"
     } else {
-        nav.style.background = "transparent"
+        nav.style.background = 'transparent'
         nav.style.border = "none"
     }
 }
 
 // Scroll smooth
-document.querySelector('.ilogo').addEventListener("click", function() {
-    scrollTo('#showcase');
+document.querySelector('.logo').addEventListener("click", function() {
+    scrollTo('#home-container');
 });
 
-document.querySelector('.ihome').addEventListener("click", function() {
-    scrollTo('#showcase');
+document.querySelector('.home-btn').addEventListener("click", function() {
+    scrollTo('#home-container');
 });
 
-document.querySelector('.iabout').addEventListener("click", function() {
-    scrollTo('#about');
+document.querySelector('.about-btn').addEventListener("click", function() {
+    scrollTo('#about-container');
 });
 
 document.querySelector('.btn-explore').addEventListener("click", function() {
-    scrollTo('#about');
+    scrollTo('#about-container');
 });
 
-document.querySelector('.iprojects').addEventListener("click", function() {
-    scrollTo('#projects');
+document.querySelector('.projects-btn').addEventListener("click", function() {
+    scrollTo('#projects-container');
 });
 
 function scrollTo(e) {
@@ -37,92 +37,104 @@ function scrollTo(e) {
 }
 
 function closeMenu() {
-    const navbar = document.querySelector('.navbar-container')
+    const navbar = document.querySelector('.navbar')
     navbar.classList.remove("active")
 }
 
+// Abrir contacts section
+const contactsContainer = document.querySelector('#contacts-container')
+const contactsBtn = document.querySelector('.contacts-btn')
+const closeContactsBtn = document.querySelector('.fa-xmark')
+
+contactsBtn.addEventListener('click', () => {
+    closeMenu()
+    contactsContainer.classList.add('active')
+})
+closeContactsBtn.addEventListener('click', () => {
+    contactsContainer.classList.remove('active')
+})
+
 // Menu mobile
-const btnMenu = document.getElementById('menu-mobile');
+const menuBtn = document.getElementById('menu-btn');
 
-function toggleMenu(event) {
-    if (event.type === 'touchstart') event.preventDefault();
-    const nav = document.querySelector("#navbar");
-    const navbar = document.querySelector('.navbar-container');
-
+menuBtn.addEventListener('click', () => {
+    const navbar = document.querySelector('.navbar');
     navbar.classList.toggle("active")
-}
+})
 
-btnMenu.addEventListener('touchstart', toggleMenu);
-btnMenu.addEventListener('click', toggleMenu);
 
 // Copiar email
 function copiar() {
-    const emailBtn = document.querySelector('.email-btn')
+    const copyEmailBtn = document.querySelector('.my-email')
 
     if (navigator.clipboard.writeText('diogofernandoj@gmail.com')) {
-        emailBtn.textContent = "Copiado!";
-        emailBtn.style.background = "transparent";
-        emailBtn.style.color = "#00D4FF";
+        copyEmailBtn.innerHTML = `<i class="fa-solid fa-envelope"></i> Email copiado! <i class="fa-regular fa-copy"></i>`
     }
 
-    setInterval(function () {
-        emailBtn.textContent = "Copiar";
-        emailBtn.style.background = "#00D4FF";
-        emailBtn.style.color = "#000";
+    setInterval(function() {
+        copyEmailBtn.innerHTML = `<i class="fa-solid fa-envelope"></i> Email <i class="fa-regular fa-copy"></i>`
     }, 3000
     );
 }
 
-// Mostrar ou esconder projetos
-const seeProjectsButton = document.querySelector('#see-projects-btn')
-const seeTrendsButton = document.querySelector('#see-trends-btn')
-const titleProjects = document.querySelector('.project-title')
-const allProjects = document.querySelector('.projects-container')
-const trendProjects = document.querySelector('.trend-container')
-seeProjectsButton.addEventListener('click', () => {
-    titleProjects.textContent = 'Projetos'
-    trendProjects.classList.remove('active')
-    allProjects.classList.add('active')
-})
-
-seeTrendsButton.addEventListener('click', () => {
-    titleProjects.textContent = 'Destaques'
-    allProjects.classList.remove('active')
-    trendProjects.classList.add('active')
-})
-
 // Carrossel
-let count = 1;
+let cont = 1;
 document.getElementById('slide1').checked = true
 
 let timer = setInterval(nextImage, 3000)
 
 function nextImage(){
-    count++
-    if(count>3) {
-        count = 1
+    cont++
+    if(cont>4) {
+        cont = 1
     }
-    document.getElementById('slide'+count).checked = true;
+    document.getElementById('slide'+cont).checked = true;
 }
 
 const s1 = document.getElementById('slide1')
 const s2 = document.getElementById('slide2')
 const s3 = document.getElementById('slide3')
+const s4 = document.getElementById('slide4')
 
 s1.addEventListener('click', function() {
-    count = 1
+    cont = 1
     clearInterval(timer)
     timer = setInterval(nextImage, 3000)
 })
 
 s2.addEventListener('click', function() {
-    count = 2
+    cont = 2
     clearInterval(timer)
     timer = setInterval(nextImage, 3000)
 })
 
 s3.addEventListener('click', function() {
-    count = 3
+    cont = 3
+    clearInterval(timer)
+    timer = setInterval(nextImage, 3000)
+})
+
+s4.addEventListener('click', function() {
+    cont = 4
+    clearInterval(timer)
+    timer = setInterval(nextImage, 3000)
+})
+
+// Setas
+const rightBtn = document.querySelector('.fa-chevron-right')
+const leftBtn = document.querySelector('.fa-chevron-left')
+
+rightBtn.addEventListener('click', () => {
+    nextImage()
+    clearInterval(timer)
+    timer = setInterval(nextImage, 3000)
+})
+leftBtn.addEventListener('click', () => {
+    cont = cont-1
+    if (cont === 0) {
+        cont = 4
+    }
+    document.getElementById('slide'+cont).checked = true;
     clearInterval(timer)
     timer = setInterval(nextImage, 3000)
 })
