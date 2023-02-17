@@ -10,8 +10,8 @@ document.body.onscroll = () => {
     nav.style.borderBottom = "none";
     nav.style.boxShadow = "none";
   } else {
-    nav.style.background = "#000000";
-    nav.style.boxShadow = "0 0 0.6rem #222";
+    nav.style.background = "#0a0a0a";
+    nav.style.boxShadow = "0 0 1rem #000";
   }
 };
 
