@@ -2,16 +2,15 @@
 const nav = document.querySelector("#navbar-container");
 document.body.onscroll = () => {
   if (window.pageYOffset > 70 && window.innerWidth >= 768) {
-    nav.style.background = "#000000";
+    nav.style.background = "#0a0a0a";
+    nav.style.border = "none";
     nav.style.borderBottom = "1px solid #222";
-    nav.style.boxShadow = "none";
   } else if (window.innerWidth >= 768 && window.pageYOffset <= 70) {
     nav.style.background = "transparent";
-    nav.style.borderBottom = "none";
-    nav.style.boxShadow = "none";
+    nav.style.border = "none";
   } else {
     nav.style.background = "#0a0a0a";
-    nav.style.boxShadow = "0 0 1rem #000";
+    nav.style.border = "1px solid #222";
   }
 };
 

@@ -23,7 +23,7 @@ html {
 /* Navbar Section */
 #navbar-container {
   background-color: #0a0a0a;
-  box-shadow: 0 0 0.6rem #222;
+  border: 1px solid #222;
   font-family: "Ubuntu", sans-serif;
   border-radius: 1rem;
   height: 70px;
@@ -98,19 +98,19 @@ html {
   left: 0;
   right: 0;
   z-index: 2;
-  background-color: #0a0a0a;
   border-radius: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  padding: 2rem;
   font-size: 2rem;
   list-style: none;
   transition: bottom 0.3s ease;
 }
 .navbar.active .menu-container {
+  background-color: #0a0a0a;
+  border: 1px solid #222;
+  padding: 2rem;
   bottom: 0;
-  box-shadow: 0 0 1rem #000;
 }
 
 .navbar li {
@@ -629,24 +629,18 @@ footer span {
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #00d4ff;
+    background-color: var(--defaultColor);
     border-radius: 10px;
   }
 
   /* Navbar */
   #navbar-container {
     background-color: transparent;
-    box-shadow: none;
     border-radius: 0;
-    height: 70px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    position: fixed;
     bottom: auto;
     left: 0;
     transform: translateX(0);
-    z-index: 1;
   }
   #navbar-container .logo {
     font-size: 2rem;
