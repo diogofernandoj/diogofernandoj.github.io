@@ -1,149 +1,170 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Portfólio | Diogo Jorge</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav id="navbar-container">
-        <div class="navbar">
-            <div class="logo">Diogo.J<span class="default-color">( )</span></div>
+      <div class="navbar">
+        <div class="logo">Diogo.J<span class="default-color">( )</span></div>
 
-            <button id="menu-btn" class="menu-btn"></button>
+        <button id="menu-btn" class="menu-btn"></button>
 
-            <ul class="menu-container">
-                <li class="home-btn">Início</li>
-                <li class="about-btn">Sobre</li>
-                <li class="projects-btn">Projetos</li>
-                <li class="contacts-btn">Contato</li>
-            </ul>
-
-        </div>
+        <ul class="menu-container">
+          <li class="home-btn"><img src="images/home-icon.svg" alt="Ícone Home" /> Início</li>
+          <li class="about-btn"><img src="images/user-icon.svg" alt="Ícone User" /> Sobre</li>
+          <li class="projects-btn"><img src="images/image-icon.svg" alt="Ícone Image" /> Projetos</li>
+          <li class="contacts-btn"><img src="images/phone-icon.svg" alt="Ícone Phone" /> Contato</li>
+        </ul>
+      </div>
     </nav>
 
     <section id="home-container">
-        <div class="home">
-            <div class="text-1">Oi, meu nome é</div>
-            <div class="text-2">Diogo Jorge</div>
-            <div class="text-3">
-                <div class="text">Eu sou</div>
-                <ul class="typing-container">
-                    <li class="typing-message">Desenvolvedor</li>
-                    <li class="typing-message">Programador</li>
-                </ul>
-            </div>
-            <p>Explore meu site e me conheça melhor</p>
-            <a href="Diogo Jorge CV.pdf" target="_blank" download="Diogo Jorge CV" class="cv-btn">Donwload CV</a>
+      <div class="home">
+        <div class="text-1">Oi, meu nome é</div>
+        <div class="text-2">Diogo Jorge</div>
+        <div class="text-3">
+          <div class="text">Eu sou</div>
+          <ul class="typing-container">
+            <li class="typing-message">Desenvolvedor</li>
+            <li class="typing-message">Programador</li>
+          </ul>
         </div>
+        <p>Explore meu site e me conheça melhor</p>
+        <a href="Diogo Jorge CV.pdf" target="blank" download="Diogo Jorge CV" class="cv-btn">Donwload CV </a>
+      </div>
 
-        <div class="btn-explore"><i class="fa-solid fa-chevron-down"></i></div>
+      <div class="btn-explore"><i class="fa-solid fa-chevron-down"></i></div>
     </section>
 
     <section id="about-container">
-        <h2>Sobre</h2>
-        <div class="about">
-            <div class="column-left">
-                <img src="" alt="">
-            </div>
-            
-            <div class="column-right">
-                <p>Prazer, me chamo Diogo e estou estudando para me tornar um Dev Front-End. Curso Análise
-                    e Desenvolvimento de Sistemas na Cruzeiro do Sul, onde conheci e me encantei pela área da programação, hoje também estudo por conta própria, para me desenvolver ainda mais, participando de diversos cursos,
-                    ganhando certificações e sempre evoluindo.</p>
-                    <span>Me acompanhe:</span>
-                <div class="links">
-                    <a href="https://github.com/diogofernandoj" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
-                    <a href="https://www.linkedin.com/in/diogofernandoj" target="_blank">Linked <i class="fa-brands fa-linkedin"></i></a>
-                </div>
-            </div>
-
+      <h2>Sobre</h2>
+      <div class="about">
+        <div class="column-left">
+          <img src="images/coming-soon-photo.png" alt="Foto de perfil" />
         </div>
+
+        <div class="column-right">
+          <p>
+            Prazer, me chamo Diogo e estou em busca da minha primeira vaga como Desenvolvedor Front-End, tenho 19 anos, sou formado em Análise e
+            desenvolvimento de sistemas pela Cruzeiro do Sul e estudo por conta própria diariamente para estar em constante evolução, ganhando cada
+            vez mais autonomia para desenvolver meus códigos.
+          </p>
+          <span>Me acompanhe:</span>
+          <div class="links">
+            <a href="https://github.com/diogofernandoj" target="_blank"><i class="fa-brands fa-github"></i> Github</a>
+            <a href="https://www.linkedin.com/in/diogofernandoj" target="_blank">Linked <i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="skills-container">
+        <p>Veja abaixo as tecnologias que eu utilizo:</p>
+        <div class="skills">
+          <div class="skill"><img src="images/html5.svg" alt="Ícone HTML5" />HTML5</div>
+          <div class="skill"><img src="images/css3.svg" alt="Ícone CSS3" />CSS3</div>
+          <div class="skill"><img src="images/js.svg" alt="Ícone Javascript" />Javascript</div>
+          <div class="skill"><img src="images/git.svg" alt="Ícone Git" />Git</div>
+          <div class="skill"><img src="images/react.svg" alt="Ícone React" />React</div>
+          <div class="skill"><img src="images/ts.svg" alt="Ícone Typescript" />Typescript</div>
+        </div>
+      </div>
     </section>
 
     <section id="projects-container">
-        <h2>Projetos</h2>
+      <h2>Projetos</h2>
 
-        <input type="radio" name="slider" id="slide1" checked>
-        <input type="radio" name="slider" id="slide2">
-        <input type="radio" name="slider" id="slide3">
-        <input type="radio" name="slider" id="slide4">
+      <input type="radio" name="slider" id="slide1" checked />
+      <input type="radio" name="slider" id="slide2" />
+      <input type="radio" name="slider" id="slide3" />
+      <input type="radio" name="slider" id="slide4" />
 
-        
-        <div class="projects">
+      <div class="projects">
+        <i class="fa-solid fa-chevron-right"></i>
+        <i class="fa-solid fa-chevron-left"></i>
 
-            <i class="fa-solid fa-chevron-right"></i>
-            <i class="fa-solid fa-chevron-left"></i>
-
-            <div class="cards">
-                <label for="slide1">
-                    <div class="card c1">
-                        <img src="images/projeto-crud-photo.png" alt="Foto Miniatura do Projeto" class="card-image">
-                        <div class="icons-card">
-                            <i class="fa-brands fa-html5"></i>
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <i class="fa-brands fa-square-js"></i>
-                        </div>
-                        <h3 class="title-card">CRUD</h3>
-                        <p class="description-card">Cadastre funcionários na tabela (Nome, Função e Salário), edite ou delete.</p>
-                        <a href="https://diogofernandoj.github.io/crud/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-                    </div>
-                </label>
-                <label for="slide2">
-                    <div class="card c2">
-                        <img src="images/hash-game-photo.png" alt="Foto Miniatura do Projeto" class="card-image">
-                        <div class="icons-card">
-                            <i class="fa-brands fa-html5"></i>
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <i class="fa-brands fa-square-js"></i>
-                        </div>
-                        <h3 class="title-card">Jogo da velha</h3>
-                        <p class="description-card">Jogo 100% automático feito através do javascript.</p>
-                        <a href="https://diogofernandoj.github.io/hash-game/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-                    </div>
-                </label>
-                <label for="slide3">
-                    <div class="card c3">
-                        <img src="images/projeto-login-photo.png" alt="Foto Miniatura do Projeto" class="card-image">
-                        <div class="icons-card">
-                            <i class="fa-brands fa-html5"></i>
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <i class="fa-brands fa-square-js"></i>
-                        </div>
-                        <h3 class="title-card">Tela de login</h3>
-                        <p class="description-card">Cadastre-se e use seus dados para fazer login (com validador de inputs).</p>
-                        <a href="https://diogofernandoj.github.io/login/" target="_blank"><i class="fa-solid fa-paperclip"></i> Visualizar</a>
-                    </div>
-                </label>
-                <label for="slide4">
-                    <div class="card c4 coming-soon">
-                        <img src="images/coming-soon-photo.png" alt="Foto Miniatura do Projeto" class="card-image coming-soon-image">
-                        <div class="icons-card">
-                            <i class="fa-brands fa-html5"></i>
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <i class="fa-brands fa-square-js"></i>
-                            <i class="fa-brands fa-react"></i>
-                        </div>
-                        <h3 class="title-card">Em breve</h3>
-                        <p class="description-card">Projetos com ReactJS em breve!</p>
-                    </div>
-                </label>
+        <div class="cards">
+          <label for="slide1" class="slide1">
+            <div class="card c1">
+              <img src="images/react-movies-photo.png" alt="Foto Miniatura do Projeto" class="card-image" />
+              <div class="icons-card">
+                <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <div class="icon"><i class="fa-brands fa-react"></i></div>
+              </div>
+              <h3 class="title-card">Catálogo de filmes</h3>
+              <p class="description-card">
+                Crie uma conta e faça login para acessar o catálogo de filmes, adicione seus filmes favoritos em sua lista.
+              </p>
+              <a href="https://diogofernandoj-movies.netlify.app" target="blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i> </a>
             </div>
-
+          </label>
+          <label for="slide2" class="slide2">
+            <div class="card c2">
+              <img src="images/react-tasks-photo.png" alt="Foto Miniatura do Projeto" class="card-image" />
+              <div class="icons-card">
+                <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <div class="icon"><i class="fa-brands fa-react"></i></div>
+              </div>
+              <h3 class="title-card">Lista de tarefas</h3>
+              <p class="description-card">Projeto react para cadastrar suas tarefas do dia a dia, adicione, delete e marque como concluída.</p>
+              <a href="https://diogofernandoj.github.io/react-tasks/" target="blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i> </a>
+            </div>
+          </label>
+          <label for="slide3" class="slide3">
+            <div class="card c3">
+              <img src="images/projeto-crud-photo.png" alt="Foto Miniatura do Projeto" class="card-image" />
+              <div class="icons-card">
+                <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <div class="icon"><i class="fa-brands fa-js"></i></div>
+              </div>
+              <h3 class="title-card">CRUD</h3>
+              <p class="description-card">Sistema de cadastro de funcionários. Cadastre utlizando Nome, Função e Salário, edite ou delete.</p>
+              <a href="https://diogofernandoj.github.io/crud/" target="blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i> </a>
+            </div>
+          </label>
+          <label for="slide4" class="slide4">
+            <div class="card c4">
+              <img src="images/hash-game-photo.png" alt="Foto Miniatura do Projeto" class="card-image" />
+              <div class="icons-card">
+                <div class="icon"><i class="fa-brands fa-html5"></i></div>
+                <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <div class="icon"><i class="fa-brands fa-js"></i></div>
+              </div>
+              <h3 class="title-card">Jogo da velha</h3>
+              <p class="description-card">Jogo da velha automático feito com javascript. Jogue com seus amigos e divirta-se!</p>
+              <a href="https://diogofernandoj.github.io/hash-game/" target="blank"> Ver projeto <i class="fa-solid fa-arrow-right"></i> </a>
+            </div>
+          </label>
         </div>
-
+      </div>
     </section>
 
     <section id="contacts-container">
-        <div class="contacts">
-            <i class="fa-solid fa-xmark"></i>
-            <h2>Fale comigo:</h2>
-            <span class="contact my-email" onclick="copiar()"><i class="fa-solid fa-envelope"></i> Email<i class="fa-regular fa-copy"></i></span>
-            <a href="https://linkwhats.app/445301" target="_blank" class="contact my-whatsapp"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
-            <a href="https://www.instagram.com/diogofernandoj/" target="_blank" class="contact my-instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <div class="contacts">
+        <h2>Fale comigo:</h2>
+        <i class="fa-solid fa-xmark"></i>
+        <div class="my-email">
+          <span class="email-content"> <i class="fa-solid fa-envelope"></i> diogofernandoj@gmail.com</span>
+          <span class="copy-btn" onclick="copiar()">Copiar <i class="fa-regular fa-copy"></i></span>
         </div>
+        <div class="contact-buttons">
+          <a href="https://www.linkedin.com/in/diogofernandoj" target="blank" class="contact my-linkedin">
+            <img src="images/linkedin-alt.svg" alt="Ícone Linkedin" />
+          </a>
+          <a href="https://linkwhats.app/445301" target="blank" class="contact my-whatsapp">
+            <img src="images/whatsapp.svg" alt="Ícone Whatsapp" />
+          </a>
+          <a href="https://www.instagram.com/diogofernandoj/" target="blank" class="contact my-instagram">
+            <img src="images/instagram.svg" alt="Ícone Instagram" />
+          </a>
+        </div>
+      </div>
     </section>
 
     <footer>Criado por <span>Diogo Jorge</span> | Todos os direitos reservados 2023.</footer>
@@ -152,5 +173,5 @@
     <script src="https://kit.fontawesome.com/d46c525ea6.js" crossorigin="anonymous"></script>
     <!-- Meu Script -->
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
