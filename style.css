@@ -296,9 +296,7 @@ html {
 .about .column-left img {
   height: 300px;
   width: 300px;
-  object-fit: contain;
-  background-color: #2229;
-  filter: grayscale(95%);
+  background-color: #222;
 }
 
 .about .column-right {
