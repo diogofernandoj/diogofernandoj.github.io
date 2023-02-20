@@ -634,6 +634,7 @@ footer span {
   /* Navbar */
   #navbar-container {
     background-color: transparent;
+    border: none;
     border-radius: 0;
     width: 100%;
     bottom: auto;
