@@ -861,7 +861,7 @@ footer span {
     transform: translateY(-50%);
     z-index: 1;
     background-color: #000;
-    color: #ccc;
+    color: #aaa;
     visibility: visible;
     cursor: pointer;
     transition: 0.2s ease;
@@ -873,6 +873,13 @@ footer span {
   .fa-chevron-right {
     right: 0;
     border-radius: 0 0.4rem 0.4rem 0;
+  }
+
+  .fa-chevron-left:hover {
+    color: #fff;
+  }
+  .fa-chevron-right:hover {
+    color: #fff;
   }
 
   /* Contacts section */
