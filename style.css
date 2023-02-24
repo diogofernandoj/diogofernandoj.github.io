@@ -785,7 +785,7 @@ footer span {
     background-color: #000;
   }
   .skills .skill:hover {
-    border: 1px solid var(--defaultColor);
+    outline: 1px solid var(--defaultColor);
   }
 
   /* Projects container */
