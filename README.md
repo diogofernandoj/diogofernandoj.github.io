@@ -1,7 +1,7 @@
-<h1 align="center">CRUD - Diogo Jorge</h1>
+<h1 align="center">Portfólio - Diogo Jorge</h1>
 
 <h1 align="center">
-    <a href="https://diogofernandoj.github.io/crud" target="blank">
+    <a href="https://diogofernandoj.github.io" target="blank">
         <img src="./images/portfolio-photo.png">
         <small align="center">Clique para visitar o projeto🔗</small>
     </a>
