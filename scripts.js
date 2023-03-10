@@ -2,15 +2,12 @@
 const nav = document.querySelector("#navbar-container");
 document.body.onscroll = () => {
   if (window.pageYOffset > 70 && window.innerWidth >= 768) {
-    nav.style.background = "#0a0a0a";
     nav.style.border = "none";
     nav.style.borderBottom = "1px solid #222";
   } else if (window.innerWidth >= 768 && window.pageYOffset <= 70) {
-    nav.style.background = "transparent";
     nav.style.border = "none";
   } else {
-    nav.style.background = "#0a0a0a";
-    nav.style.border = "1px solid #222";
+    nav.style.borderTop = "1px solid #222";
   }
 };
 
