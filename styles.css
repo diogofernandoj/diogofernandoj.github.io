@@ -397,7 +397,7 @@ html {
   width: 100%;
   padding: 2rem 0;
   color: #fff;
-  background: #000;
+  background: var(--black-800);
 }
 #projects-container h2 {
   text-align: center;
@@ -420,46 +420,36 @@ html {
 }
 
 .cards .card {
-  height: 440px;
-  width: 280px;
-  background-color: #111;
+  height: 260px;
+  width: 350px;
   border-radius: 0.8rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--black-700);
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.cards .card img {
-  width: 280px;
-  height: 35%;
-}
-.cards .card .coming-soon-image {
-  filter: grayscale(90%);
+.cards .card .banner img {
+  width: 100%;
+  height: 100%;
 }
 .cards .card .icons-card {
   width: 100%;
-  margin: 1rem 0;
-  padding: 0.2rem 0.6rem;
-  border-radius: 1rem;
   display: flex;
+  margin-top: 0.5rem;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
-.cards .card .icons-card .icon {
-  height: 1.8rem;
-  width: 1.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #aaa;
-  background: transparent;
-  border-radius: 0.4rem;
-  box-shadow: 0 0 1rem #000;
+.cards .card .icons-card .icon img {
+  height: 20px;
+  width: 20px;
+  filter: grayscale(1);
 }
 .cards .title-card {
   text-align: center;
-  color: #fff;
+  color: #ccc;
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -469,15 +459,13 @@ html {
   margin: 0 auto;
 }
 .cards a {
-  width: 80%;
+  margin-left: 1rem;
+  width: 40%;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 0.6rem;
   color: var(--primaryColor);
-  border-radius: 1rem;
   font-weight: 500;
-  padding: 0.6rem;
   position: absolute;
   bottom: 1rem;
   left: 50%;
@@ -486,7 +474,7 @@ html {
 }
 .cards a > i {
   position: absolute;
-  right: 3.2rem;
+  right: 1.5rem;
   transition: 0.3s ease;
 }
 
@@ -822,7 +810,7 @@ footer span {
   }
 
   .cards a:hover > i {
-    right: 2rem;
+    right: 0.5rem;
   }
 
   #slide1:checked ~ .projects .cards .c2,
@@ -867,10 +855,8 @@ footer span {
   .fa-chevron-left {
     position: absolute;
     font-size: 2rem;
-    top: 200px;
-    transform: translateY(-50%);
+    top: 25%;
     z-index: 1;
-    background-color: #000;
     color: #aaa;
     visibility: visible;
     cursor: pointer;
