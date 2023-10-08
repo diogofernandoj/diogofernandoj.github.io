@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 ::selection {
   background-color: #fff;
@@ -40,7 +41,6 @@ html {
   align-items: center;
 }
 .navbar {
-  font-family: "Ubuntu", sans-serif;
   height: 100%;
   width: 90%;
 
@@ -152,18 +152,32 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 70px);
   width: 100%;
   min-height: 500px;
   background: var(--black-800);
   color: #fff;
-  font-family: "Ubuntu", sans-serif;
   position: relative;
 }
 .home {
   max-width: 1200px;
-  width: 80%;
+  width: 90%;
+  height: 100%;
   margin: auto;
+  padding: 3rem 0;
+
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  position: relative;
+}
+.home .left-column {
+  position: absolute;
+  left: 3rem;
+  top: 5rem;
+}
+.home .right-column img {
+  width: 300px;
 }
 .home .text-1 {
   font-size: 1.4rem;
@@ -265,7 +279,6 @@ html {
 /* About section */
 #about-container {
   width: 100%;
-  font-family: "Roboto", sans-serif;
   padding: 3rem 0;
   color: #ddd;
   background-color: var(--black-800);
@@ -276,7 +289,6 @@ html {
 #about-container h2 {
   width: max-content;
   margin: 1rem auto 4rem auto;
-  font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
   font-weight: 500;
   color: #fff;
@@ -314,7 +326,6 @@ html {
 .about .column-left img {
   height: 300px;
   width: 300px;
-  background-color: #222;
 }
 
 .about .column-right {
@@ -330,7 +341,7 @@ html {
   gap: 1rem;
 }
 .links a {
-  background-color: #222;
+  background-color: var(--black-700);
   font-size: 1.1rem;
   margin-top: 0.5rem;
   padding: 0.4rem 1rem;
@@ -357,61 +368,38 @@ html {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.4rem;
+  backdrop-filter: blur(10px);
 }
 .skills .skill {
-  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
-  color: #fff;
-  background-color: transparent;
-  backdrop-filter: blur(20px);
-  border: 1px solid transparent;
+  color: var(--primaryColor);
   border-radius: 0.2rem;
-  height: 100px;
-  width: 100px;
+  height: 140px;
+  width: 140px;
+  background-color: #2229;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  box-shadow: 0 0 1.2rem var(--black-800);
+
   transition: 0.1s ease;
 }
 .skills .skill img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
-}
-
-.skill:nth-child(6) {
-  position: relative;
-  overflow: hidden;
-  filter: grayscale(90%);
-}
-.skill:nth-child(6)::before {
-  position: absolute;
-  content: "";
-  height: 140%;
-  width: 1.2rem;
-  background-color: #2229;
-  transform: rotate(-45deg);
-}
-.skill:nth-child(6)::after {
-  position: absolute;
-  content: "Em breve";
-  transform: rotate(45deg);
-  color: #fff9;
 }
 
 /* Projects section */
 #projects-container {
   width: 100%;
-  font-family: "Roboto", sans-serif;
   padding: 2rem 0;
   color: #fff;
   background: #000;
 }
 #projects-container h2 {
-  font-family: "Ubuntu", sans-serif;
   text-align: center;
   font-size: 2.2rem;
   font-weight: 500;
@@ -440,7 +428,6 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
 }
 .cards .card img {
   width: 280px;
@@ -510,7 +497,6 @@ html {
 
 /* Contacts section */
 #contacts-container {
-  font-family: "Roboto", sans-serif;
   position: fixed;
   inset: 0;
   z-index: 4;
@@ -558,7 +544,6 @@ html {
 }
 .contacts h2 {
   color: var(--primaryColor);
-  font-family: "Ubuntu", sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -620,7 +605,6 @@ html {
 
 /* Footer */
 footer {
-  font-family: "Ubuntu", sans-serif;
   text-align: center;
   font-weight: 400;
   background-color: #000;
@@ -715,10 +699,21 @@ footer span {
   }
 
   /* Home section */
+  #home-container {
+    height: 100vh;
+  }
   .home {
     width: 80%;
     max-width: 1200px;
-    margin: auto;
+    align-items: center;
+  }
+  .home .left-column {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .home .right-column img {
+    width: 100%;
+    max-width: 500px;
   }
   .home .text-1 {
     font-size: 1.7rem;
@@ -797,7 +792,7 @@ footer span {
   }
 
   .links a:hover {
-    background-color: #000;
+    background-color: var(--black-600);
   }
   .skills .skill:hover {
     outline: 1px solid var(--primaryColor);
