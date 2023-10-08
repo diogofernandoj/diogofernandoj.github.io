@@ -13,39 +13,48 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --defaultColor: #00d4ff;
+  --primaryColor: #00d4ff;
+  --black-600: #3a3a3a;
+  --black-700: #2a2a2a;
+  --black-800: #1a1a1a;
 }
 .default-color {
-  color: var(--defaultColor);
+  color: var(--primaryColor);
 }
 
 /* Navbar Section */
 #navbar-container {
-  background-color: transparent;
-  backdrop-filter: blur(10px);
-  font-family: "Ubuntu", sans-serif;
-  height: 70px;
   width: 100%;
-  display: flex;
-  align-items: center;
+  height: 70px;
+
+  border-top: 2px solid #222;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#navbar-container .logo {
+.navbar {
+  font-family: "Ubuntu", sans-serif;
+  height: 100%;
+  width: 90%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s ease;
+}
+.navbar .logo {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
-}
-.navbar {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .navbar .menu-btn {
@@ -55,7 +64,9 @@ html {
   width: 30px;
   cursor: pointer;
   position: relative;
-  z-index: 3;
+  z-index: 4;
+
+  transition: 0.3s ease;
 }
 .navbar .menu-btn::before {
   position: absolute;
@@ -63,7 +74,7 @@ html {
   right: 0;
   content: "";
   width: 1.8rem;
-  height: 1px;
+  height: 2px;
   background-color: #fff;
   transition: 0.3s ease;
 }
@@ -73,19 +84,19 @@ html {
   right: 0;
   content: "";
   width: 1.8rem;
-  height: 1px;
+  height: 2px;
   background-color: #fff;
   transition: 0.3s ease;
 }
-.navbar.active .menu-btn::before {
+#navbar-container.active .menu-btn::before {
   top: 50%;
   transform: rotate(-45deg);
-  background-color: var(--defaultColor);
+  background-color: var(--primaryColor);
 }
-.navbar.active .menu-btn::after {
+#navbar-container.active .menu-btn::after {
   top: 50%;
   transform: rotate(45deg);
-  background-color: var(--defaultColor);
+  background-color: var(--primaryColor);
 }
 
 .navbar .menu-container {
@@ -95,19 +106,29 @@ html {
   bottom: -300px;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   font-size: 2rem;
   list-style: none;
-  transition: bottom 0.3s ease;
+  transition: 0.3s ease-out;
 }
-.navbar.active .menu-container {
-  background-color: #0a0a0a;
-  border-top: 1px solid #222;
+#navbar-container.active {
+  height: 240px;
+}
+#navbar-container.active .logo {
+  visibility: hidden;
+}
+#navbar-container.active .menu-container {
+  border-top: 2px solid #222;
   padding: 2rem;
   bottom: 0;
+}
+#navbar-container.active .navbar {
+  align-items: flex-start;
+  justify-content: end;
+  padding-top: 1rem;
 }
 
 .navbar li {
@@ -134,7 +155,7 @@ html {
   height: 100vh;
   width: 100%;
   min-height: 500px;
-  background: #000;
+  background: var(--black-800);
   color: #fff;
   font-family: "Ubuntu", sans-serif;
   position: relative;
@@ -169,7 +190,7 @@ html {
   overflow: hidden;
 }
 .home .text-3 .typing-message {
-  color: var(--defaultColor);
+  color: var(--primaryColor);
   font-weight: 500;
   list-style: none;
   line-height: 1.5rem;
@@ -192,8 +213,8 @@ html {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #000;
-  border-left: 2px solid var(--defaultColor);
+  background-color: var(--black-800);
+  border-left: 2px solid var(--primaryColor);
   animation: typing 1.5s steps(10) infinite alternate;
 }
 
@@ -212,7 +233,7 @@ html {
 
 .home .cv-btn {
   color: #fff;
-  background-color: var(--defaultColor);
+  background-color: var(--primaryColor);
   font-weight: 700;
   font-size: 0.9rem;
   padding: 0.5rem 1rem;
@@ -225,7 +246,7 @@ html {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--defaultColor);
+  color: var(--primaryColor);
   font-size: 1.8rem;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -247,7 +268,7 @@ html {
   font-family: "Roboto", sans-serif;
   padding: 3rem 0;
   color: #ddd;
-  background: #0a0a0a;
+  background-color: var(--black-800);
   border-top: 1px solid #222;
   border-bottom: 1px solid #222;
   position: relative;
@@ -275,8 +296,8 @@ html {
   content: "Quem sou eu";
   position: absolute;
   width: max-content;
-  color: var(--defaultColor);
-  background-color: #0a0a0a;
+  color: var(--primaryColor);
+  background-color: var(--black-800);
   font-size: 0.8rem;
   bottom: -0.9rem;
   left: 50%;
@@ -341,7 +362,8 @@ html {
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   color: #fff;
-  background-color: #0a0a0a;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
   border: 1px solid transparent;
   border-radius: 0.2rem;
   height: 100px;
@@ -351,7 +373,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  box-shadow: 0 0 1.2rem #000;
+  box-shadow: 0 0 1.2rem var(--black-800);
   transition: 0.1s ease;
 }
 .skills .skill img {
@@ -465,7 +487,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 0.6rem;
-  color: var(--defaultColor);
+  color: var(--primaryColor);
   border-radius: 1rem;
   font-weight: 500;
   padding: 0.6rem;
@@ -535,7 +557,7 @@ html {
   transition: 0.3s ease;
 }
 .contacts h2 {
-  color: var(--defaultColor);
+  color: var(--primaryColor);
   font-family: "Ubuntu", sans-serif;
   margin-bottom: 1rem;
 }
@@ -556,7 +578,7 @@ html {
   line-height: 1.5rem;
 }
 .contacts .my-email .email-content i {
-  color: var(--defaultColor);
+  color: var(--primaryColor);
   font-size: 1rem;
 }
 .contacts .my-email .copy-btn {
@@ -611,7 +633,7 @@ footer {
 
 footer span {
   font-weight: 500;
-  color: var(--defaultColor);
+  color: var(--primaryColor);
 }
 
 @media screen and (min-width: 768px) {
@@ -621,11 +643,11 @@ footer span {
   }
 
   *::-webkit-scrollbar-track {
-    background-color: #000;
+    background-color: var(--black-700);
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: var(--defaultColor);
+    background-color: var(--primaryColor);
     border-radius: 10px;
   }
 
@@ -636,18 +658,13 @@ footer span {
   /* Navbar */
   #navbar-container {
     border: none;
-    border-radius: 0;
-    width: 100%;
-    bottom: auto;
-    left: 0;
-    transform: translateX(0);
+    inset: 0 0 auto 0;
   }
   #navbar-container .logo {
     font-size: 2rem;
   }
   .navbar {
     max-width: 1200px;
-    width: 80%;
   }
   .navbar .menu-btn {
     display: none;
@@ -684,7 +701,7 @@ footer span {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--defaultColor);
+    background-color: var(--primaryColor);
     animation: nav 0.3s ease;
   }
 
@@ -736,7 +753,7 @@ footer span {
     transition: 0.3s ease-in-out;
   }
   .home .cv-btn:hover {
-    color: var(--defaultColor);
+    color: var(--primaryColor);
     background-color: #fff;
   }
 
@@ -749,7 +766,7 @@ footer span {
     animation: btnExplore 0.8s ease-in-out infinite alternate;
   }
   .btn-explore:hover {
-    color: var(--defaultColor);
+    color: var(--primaryColor);
   }
 
   /* About section */
@@ -783,7 +800,7 @@ footer span {
     background-color: #000;
   }
   .skills .skill:hover {
-    outline: 1px solid var(--defaultColor);
+    outline: 1px solid var(--primaryColor);
   }
 
   /* Projects container */
@@ -882,7 +899,7 @@ footer span {
 
   /* Contacts section */
   .contacts .fa-xmark:hover {
-    color: var(--defaultColor);
+    color: var(--primaryColor);
   }
   .contacts .my-email {
     font-size: 1.1rem;
@@ -891,7 +908,7 @@ footer span {
     font-size: 1.4rem;
   }
   .contacts .contact:hover {
-    border: 2px solid var(--defaultColor);
+    border: 2px solid var(--primaryColor);
   }
 
   footer {

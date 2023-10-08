@@ -38,8 +38,7 @@ function scrollTo(e) {
 }
 
 function closeMenu() {
-  const navbar = document.querySelector(".navbar");
-  navbar.classList.remove("active");
+  nav.classList.remove("active");
 }
 
 // Abrir contacts section
@@ -64,8 +63,7 @@ contactsContainer.addEventListener("click", (e) => {
 const menuBtn = document.getElementById("menu-btn");
 
 menuBtn.addEventListener("click", () => {
-  const navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("active");
+  nav.classList.toggle("active");
 });
 
 // Copiar email
