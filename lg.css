@@ -1,0 +1,19 @@
+@media screen and (min-width: 1024px) {
+  .about {
+    flex-direction: row;
+    width: 80%;
+  }
+  .home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home .left-column {
+    margin: 0;
+  }
+  .home .right-column img {
+    width: 450px;
+    max-width: 500px;
+    display: block;
+  }
+}
