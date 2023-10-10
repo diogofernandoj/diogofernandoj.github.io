@@ -1,8 +1,4 @@
 @media screen and (min-width: 1024px) {
-  .about {
-    flex-direction: row;
-    width: 80%;
-  }
   .home {
     display: flex;
     justify-content: space-between;
@@ -15,5 +11,37 @@
     width: 450px;
     max-width: 500px;
     display: block;
+  }
+
+  .about {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  #projects-container {
+    padding-bottom: 38rem;
+  }
+  .cards .card {
+    width: 500px;
+    height: 500px;
+  }
+  .cards .card .banner img {
+    height: 300px;
+  }
+  .cards a {
+    margin-left: 2rem;
+  }
+  .cards a > i {
+    right: 5rem;
+  }
+  .cards a:hover > i {
+    right: 4rem;
+  }
+
+  .fa-chevron-left {
+    left: -10rem;
+  }
+  .fa-chevron-right {
+    right: -10rem;
   }
 }

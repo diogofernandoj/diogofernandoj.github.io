@@ -400,7 +400,7 @@ html {
 /* Projects section */
 #projects-container {
   width: 100%;
-  padding: 2rem 0;
+  padding: 1rem 0;
   color: #fff;
   background: var(--black-800);
 }
@@ -408,7 +408,7 @@ html {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 #projects-container input {
   display: none;
@@ -424,15 +424,20 @@ html {
   gap: 2rem;
 }
 
+.cooming-soon .banner img,
+.cooming-soon > .icons-card {
+  filter: blur(10px);
+}
 .cards .card {
-  height: 240px;
+  height: 450px;
   width: 350px;
+
   border-radius: 0.8rem;
   backdrop-filter: blur(10px);
-  background-color: #47474740;
   border: 1px solid var(--black-700);
   overflow: hidden;
   position: relative;
+
   display: flex;
   flex-direction: column;
 }
@@ -441,7 +446,6 @@ html {
   width: 100%;
 }
 .cards .card .icons-card {
-  height: 40px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -457,19 +461,18 @@ html {
   text-align: center;
   color: #ccc;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
 .cards .description-card {
   color: #aaa;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
+  text-align: justify;
 }
 .cards a {
   margin-left: 1rem;
-  width: 40%;
+  width: 35%;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
   color: var(--primaryColor);
   font-weight: 500;
   position: absolute;
@@ -480,8 +483,11 @@ html {
 }
 .cards a > i {
   position: absolute;
-  right: 1.5rem;
+  right: 2rem;
   transition: 0.3s ease;
+}
+.cooming-soon > a {
+  display: none;
 }
 
 .fa-chevron-right,

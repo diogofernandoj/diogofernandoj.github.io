@@ -221,8 +221,8 @@
   .fa-chevron-left {
     position: absolute;
     font-size: 2rem;
-    top: 25%;
-    z-index: 1;
+    top: 45%;
+    z-index: 2;
     color: #aaa;
     visibility: visible;
     cursor: pointer;
@@ -230,11 +230,9 @@
   }
   .fa-chevron-left {
     left: 0;
-    border-radius: 0.4rem 0 0 0.4rem;
   }
   .fa-chevron-right {
     right: 0;
-    border-radius: 0 0.4rem 0.4rem 0;
   }
 
   .fa-chevron-left:hover {
