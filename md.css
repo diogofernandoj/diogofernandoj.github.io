@@ -169,15 +169,10 @@
     justify-content: center;
   }
   .cards .card {
-    width: 350px;
-    height: 280px;
     position: absolute;
     left: 50%;
     top: 0;
     transition: 0.4s ease;
-  }
-  .cards .card .banner img {
-    height: 200px;
   }
 
   .cards a:hover > i {
