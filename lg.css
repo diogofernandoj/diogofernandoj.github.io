@@ -32,10 +32,10 @@
     margin-left: 2rem;
   }
   .cards a > i {
-    right: 5rem;
+    right: 4rem;
   }
   .cards a:hover > i {
-    right: 4rem;
+    right: 3rem;
   }
 
   .fa-chevron-left {

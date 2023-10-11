@@ -2,7 +2,7 @@
 
 <h1 align="center">
     <a href="https://diogofernandoj.github.io" target="blank">
-        <img src="./images/portfolio-photo.png">
+        <img src="#">
         <small align="center">Clique para visitar o projeto🔗</small>
     </a>
 </h1>

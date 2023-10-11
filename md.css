@@ -176,7 +176,7 @@
   }
 
   .cards a:hover > i {
-    right: 0.5rem;
+    right: 1rem;
   }
 
   #slide1:checked ~ .projects .cards .c2,
