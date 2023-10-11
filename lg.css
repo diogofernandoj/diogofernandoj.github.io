@@ -22,7 +22,7 @@
     padding-bottom: 38rem;
   }
   .cards .card {
-    width: 500px;
+    width: 450px;
     height: 500px;
   }
   .cards .card .banner img {
@@ -39,9 +39,9 @@
   }
 
   .fa-chevron-left {
-    left: -10rem;
+    left: -7rem;
   }
   .fa-chevron-right {
-    right: -10rem;
+    right: -7rem;
   }
 }
