@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
 }
 /* Scrollbar */
 *::-webkit-scrollbar {
@@ -25,11 +24,16 @@
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--black-800);
+}
 :root {
   --primaryColor: #00d4ff;
   --black-600: #3a3a3a;
   --black-700: #2a2a2a;
   --black-800: #1a1a1a;
+  --black-900: #0c0c0c;
 }
 .default-color {
   color: var(--primaryColor);
@@ -134,7 +138,6 @@ html {
 }
 #navbar-container.active .menu-container {
   border-top: 2px solid #222;
-  padding: 2rem;
   bottom: 0;
 }
 #navbar-container.active .navbar {
@@ -422,10 +425,22 @@ html {
   gap: 2rem;
 }
 
-.cooming-soon .banner img,
-.cooming-soon > .icons-card {
-  filter: blur(10px);
+.cooming-soon .banner {
+  position: relative;
+  overflow: hidden;
+  filter: grayscale(90%);
 }
+.cooming-soon .banner::after {
+  position: absolute;
+  content: "Em breve";
+  font-weight: bold;
+  font-size: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff9;
+}
+
 .cards .card {
   height: 450px;
   width: 350px;
@@ -442,6 +457,7 @@ html {
 .cards .card .banner img {
   height: 200px;
   width: 100%;
+  object-fit: cover;
 }
 .cards .card .icons-card {
   width: 100%;
@@ -510,13 +526,14 @@ html {
 .contacts {
   width: 90%;
   max-width: 450px;
-  background-color: #111;
+  background-color: var(--black-800);
   color: #eee;
   box-shadow: 0 0 1.2rem #0009;
   padding: 2rem;
   border-radius: 0.6rem;
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
   gap: 1rem;
   position: relative;
 }
@@ -548,12 +565,12 @@ html {
 
 .contacts .my-email {
   width: max-content;
-  margin: 0 auto;
   border-radius: 1rem;
   padding-left: 1rem;
-  background-color: #111;
+  margin-left: -1rem;
+  background-color: var(--black-800);
   color: #aaa;
-  box-shadow: 0 0 1.4rem #0009;
+  box-shadow: 0 0 1rem #0008;
   font-size: 0.8rem;
   font-weight: 500;
   display: flex;
@@ -566,7 +583,7 @@ html {
   font-size: 1rem;
 }
 .contacts .my-email .copy-btn {
-  background-color: #0a0a0a;
+  background-color: #151515;
   border: 1px solid #222;
   color: #aaa;
   font-weight: 500;
@@ -585,9 +602,8 @@ html {
 }
 .contacts .contact-buttons .contact {
   color: #aaa;
-  background-color: #0a0a0a;
-  border-radius: 0.4rem;
-  border: 2px solid #222;
+  border-radius: 50%;
+  border: 2px solid var(--black-700);
   height: 3.5rem;
   width: 3.5rem;
   display: flex;
@@ -595,11 +611,12 @@ html {
   align-items: center;
   font-size: 1.4rem;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 .contacts .contact-buttons .contact img {
   height: 30px;
   width: 30px;
-  object-fit: contain;
+  filter: grayscale(1);
 }
 
 /* Footer */
