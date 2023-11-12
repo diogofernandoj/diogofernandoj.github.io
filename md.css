@@ -253,7 +253,10 @@
     font-size: 1.4rem;
   }
   .contacts .contact:hover {
-    border: 2px solid var(--primaryColor);
+    box-shadow: 0 0 0.5rem #00d4ff;
+  }
+  .contacts .contact:hover img {
+    filter: grayscale(0);
   }
 
   footer {
