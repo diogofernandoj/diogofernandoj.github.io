@@ -7,6 +7,8 @@
   #navbar-container {
     border: none;
     inset: 0 0 auto 0;
+    backdrop-filter: blur(10px);
+    background: none;
   }
   #navbar-container .logo {
     font-size: 2rem;
